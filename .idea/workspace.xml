@@ -6,7 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="" />
+    <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/dthealth-manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/dthealth/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/dthealth/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/dthealth/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/views/hello.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/resources/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/dthealth-mq.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/MqService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/impl/MqServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/main/main1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/dthealth/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-mq/src/test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-parent.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/dthealth-manager/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -236,6 +266,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dthealth-mq" />
@@ -344,12 +375,12 @@
       <updated>1563106568821</updated>
       <workItem from="1563106571581" duration="640000" />
       <workItem from="1563156672602" duration="4945000" />
-      <workItem from="1563161833268" duration="3477000" />
+      <workItem from="1563161833268" duration="3761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9062000" />
+    <option name="totallyTimeSpent" value="9346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
