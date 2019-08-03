@@ -1,6 +1,6 @@
-package com.dthealth.service.impl;
+package com.manager.service.impl;
 
-import com.dthealth.service.UserService;
+import com.manager.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

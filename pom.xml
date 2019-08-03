@@ -11,22 +11,26 @@
     <modules>
         <module>dthealth-mq</module>
         <module>dthealth-manager</module>
+        <module>dthealth-mysql-access</module>
+        <module>dthealth-mongo-access</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <spring.version>5.0.7.RELEASE</spring.version>
+        <kafka-clients.version>2.2.0</kafka-clients.version>
+        <spring-boot>2.1.6.RELEASE</spring-boot>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.apache.kafka</groupId>
-                <artifactId>kafka-streams</artifactId>
-                <version>2.0.1</version>
-            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>org.apache.kafka</groupId>-->
+            <!--                <artifactId>kafka-streams</artifactId>-->
+            <!--                <version>2.0.1</version>-->
+            <!--            </dependency>-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
@@ -103,15 +107,52 @@
                 <version>${spring.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.kafka</groupId>
-                <artifactId>spring-kafka</artifactId>
-                <version>2.2.7.RELEASE</version>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-clients</artifactId>
+                <version>${kafka-clients.version}</version>
+            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.kafka</groupId>-->
+            <!--                <artifactId>spring-kafka</artifactId>-->
+            <!--                <version>2.2.7.RELEASE</version>-->
+            <!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.kafka</groupId>-->
+            <!--                <artifactId>spring-kafka-test</artifactId>-->
+            <!--                <version>2.2.7.RELEASE</version>-->
+            <!--                <scope>test</scope>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.kafka</groupId>
-                <artifactId>spring-kafka-test</artifactId>
-                <version>2.2.7.RELEASE</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
                 <scope>test</scope>
+                <version>${spring-boot}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-commons</artifactId>
+                <version>2.1.9.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <scope>runtime</scope>
+                <version>8.0.12</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jayway.jsonpath</groupId>
+                <artifactId>json-path</artifactId>
+                <version>2.4.0</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
@@ -168,6 +209,11 @@
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>2.1.6.RELEASE</version>
                 </plugin>
             </plugins>
         </pluginManagement>

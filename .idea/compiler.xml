@@ -6,12 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dthealth-mysql-access" />
         <module name="dthealth-manager" />
+        <module name="dthealth-mongo-access" />
         <module name="dthealth-mq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="dthealth-access-mysql" target="1.8" />
+      <module name="dthealth-data-access" target="1.8" />
       <module name="dthealth-test" target="1.7" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dthealth-access-mysql" options="" />
+      <module name="dthealth-mongo-access" options="-parameters" />
+      <module name="dthealth-mysql-access" options="-parameters" />
+    </option>
   </component>
 </project>
