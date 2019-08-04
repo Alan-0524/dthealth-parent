@@ -32,11 +32,6 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>com.dthealth</groupId>
             <artifactId>dthealth-mq</artifactId>
             <version>1.0-SNAPSHOT</version>
@@ -45,7 +40,6 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
 
     <build>
         <plugins>
