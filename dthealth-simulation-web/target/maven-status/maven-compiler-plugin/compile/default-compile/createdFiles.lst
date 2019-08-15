@@ -1,7 +1,0 @@
-com\dthealth\simulation\controller\SimulationController.class
-com\dthealth\simulation\service\impl\HomeServiceImpl.class
-com\dthealth\simulation\service\HomeService.class
-com\dthealth\simulation\config\WebSecurityConfig.class
-com\dthealth\simulation\message\MessageReceiver.class
-com\dthealth\simulation\message\MessageSender.class
-com\dthealth\simulation\Application.class
