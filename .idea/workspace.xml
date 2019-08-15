@@ -7,44 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/manager/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/manager/message/MessageReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/manager/message/MessageSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/manager/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/java/com/manager/service/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/views/hello.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager/src/main/webapp/resources/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mongo-access/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mongo-access/src/main/java/app/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mongo-access/src/main/java/app/message/MessageReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mongo-access/src/main/java/app/message/MessageSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mongo-access/src/main/java/app/service/repositories/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mongo-access/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/mq/MessageConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/mq/MessageProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/mq/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/mq/interfaces/ConsumerOperationInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/mq/interfaces/ProducerResultInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mysql-access/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mysql-access/src/main/java/app/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mysql-access/src/main/java/app/entities/Greeting.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mysql-access/src/main/java/app/message/MessageReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mysql-access/src/main/java/app/message/MessageSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mysql-access/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
