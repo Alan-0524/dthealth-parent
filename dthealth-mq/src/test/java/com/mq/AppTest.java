@@ -1,18 +1,5 @@
 package com.mq;
 
-import com.dthealth.mq.MessageConsumer;
-import com.dthealth.mq.MessageProducer;
-import com.dthealth.mq.interfaces.ConsumerOperationInterface;
-import com.dthealth.mq.interfaces.ProducerResultInterface;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.producer.RecordMetadata;
-import org.junit.Test;
-
-import java.util.Arrays;
-
-import static org.junit.Assert.assertTrue;
-
 public class AppTest {
 
 //    MessageConsumer messageConsumer = new MessageConsumer();

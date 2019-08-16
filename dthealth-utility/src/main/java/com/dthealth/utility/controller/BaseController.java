@@ -1,6 +1,5 @@
-package com.dthealth.access.controller;
+package com.dthealth.utility.controller;
 
-import com.dthealth.dao.entity.ResultResponse;
 import com.dthealth.utility.json.JsonUtility;
 import com.dthealth.utility.logger.BaseLogger;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -16,7 +15,7 @@ public class BaseController {
     @Autowired
     JsonUtility jsonUtility;
 
-    Object identifyReturnType(String isReturnJson, Model model, ResultResponse resultResponse, String successPage, String failurePage) {
+    public Object identifyReturnType(String isReturnJson, Model model, ResultResponse resultResponse, String successPage, String failurePage) {
         if (!StringUtils.isEmpty(isReturnJson)) {
             try {
                 return new ResponseEntity<>(jsonUtility.objectToJson(resultResponse.getObject()), resultResponse.getStatusCode());

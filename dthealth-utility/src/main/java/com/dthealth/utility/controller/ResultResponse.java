@@ -1,4 +1,4 @@
-package com.dthealth.dao.entity;
+package com.dthealth.utility.controller;
 
 import org.springframework.http.HttpStatus;
 

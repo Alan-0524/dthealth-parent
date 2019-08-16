@@ -2,7 +2,6 @@ package com.dthealth.manager.config;
 
 import com.dthealth.dao.service.TokenService;
 import com.dthealth.safe.config.AuthenticationResultHandle;
-import com.dthealth.safe.config.UserInfoAuthentication;
 import com.dthealth.safe.config.UserRoleAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

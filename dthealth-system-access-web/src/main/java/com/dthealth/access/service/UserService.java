@@ -1,7 +1,7 @@
 package com.dthealth.access.service;
 
-import com.dthealth.dao.entity.ResultResponse;
 import com.dthealth.dao.entity.User;
+import com.dthealth.utility.controller.ResultResponse;
 
 import javax.servlet.http.HttpServletResponse;
 
