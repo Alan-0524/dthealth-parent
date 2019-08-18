@@ -7,43 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/message/ManagerMessageSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/noSqlSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/noSqlSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/impl/RedisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/ManagerWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/message/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/message/ManagerMessageReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/message/MessageSender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/interfaces/ConsumerOperationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/interfaces/ConsumerOperationInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserInfoAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserInfoAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserRoleAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserRoleAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/SimulationWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/config/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/controller/SimulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/controller/SimulationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/message/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/message/MessageReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/message/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/message/MessageSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/SystemAccessWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/message/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/message/MessageReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/message/MessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/message/MessageSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-utility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-utility/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-utility/src/main/java/com/dthealth/utility/password/PasswordUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/impl/RedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/impl/RedisServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,11 +73,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/service/impl" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4597701" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.redisPlugin" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
