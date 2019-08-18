@@ -1,6 +1,6 @@
 package com.dthealth.safe.config;
 
-import com.dthealth.dao.service.TokenService;
+import com.dthealth.dao.service.RedisService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,12 +21,12 @@ import java.io.IOException;
 
 public class UserInfoAuthentication extends UsernamePasswordAuthenticationFilter {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private TokenService tokenService;
+    private RedisService redisService;
     private AuthenticationManager authenticationManager;
 
-    public UserInfoAuthentication(AuthenticationManager authenticationManager, TokenService tokenService) {
+    public UserInfoAuthentication(AuthenticationManager authenticationManager, RedisService redisService) {
         this.authenticationManager = authenticationManager;
-        this.tokenService = tokenService;
+        this.redisService = redisService;
         super.setFilterProcessesUrl("/do-sign-in");
     }
 
@@ -70,7 +70,7 @@ public class UserInfoAuthentication extends UsernamePasswordAuthenticationFilter
         String roleCode = role.getAuthority();
         String token = "";
         try {
-            token = tokenService.storeToken(userAccount, roleCode, 3600L);
+            token = redisService.storeToken(userAccount, roleCode, 3600L);
         } catch (JsonProcessingException je) {
             logger.error("JsonProcessingException: {}", je.getMessage());
         } catch (Exception e) {

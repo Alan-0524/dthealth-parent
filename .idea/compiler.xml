@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="dthealth-dao" />
         <module name="dthealth-utility" />
+        <module name="dthealth-cache-web" />
         <module name="dthealth-system-access-web" />
         <module name="dthealth-mq" />
         <module name="dthealth-safe" />
@@ -15,18 +16,13 @@
         <module name="dthealth-manager-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="dthealth-mongo-access" target="1.8" />
-      <module name="dthealth-mysql-access" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dthealth-cache-web" options="-parameters" />
       <module name="dthealth-dao" options="-parameters" />
       <module name="dthealth-manager-web" options="-parameters" />
-      <module name="dthealth-mongo-access" options="-parameters" />
       <module name="dthealth-mq" options="-parameters" />
-      <module name="dthealth-mysql-access" options="-parameters" />
       <module name="dthealth-safe" options="-parameters" />
       <module name="dthealth-simulation-web" options="-parameters" />
       <module name="dthealth-system-access-web" options="-parameters" />

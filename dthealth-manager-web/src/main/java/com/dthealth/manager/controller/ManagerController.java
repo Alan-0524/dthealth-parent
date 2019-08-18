@@ -1,8 +1,8 @@
 package com.dthealth.manager.controller;
 
 
-import com.dthealth.manager.message.MessageReceiver;
-import com.dthealth.manager.message.MessageSender;
+import com.dthealth.manager.message.ManagerMessageReceiver;
+import com.dthealth.manager.message.ManagerMessageSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ManagerController {
 
     @Autowired
-    MessageSender messageSender;
+    ManagerMessageSender managerMessageSender;
 
     @Autowired
-    MessageReceiver messageReceiver;
+    ManagerMessageReceiver managerMessageReceiver;
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String index(Model model) {

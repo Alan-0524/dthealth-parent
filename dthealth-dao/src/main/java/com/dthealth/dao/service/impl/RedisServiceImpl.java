@@ -1,7 +1,11 @@
 package com.dthealth.dao.service.impl;
 
-import com.dthealth.dao.service.TokenService;
+import com.dthealth.dao.entity.BodyIndex;
+import com.dthealth.dao.service.RedisService;
 import com.dthealth.dao.utility.RedisUtility;
+import com.dthealth.utility.json.JsonUtility;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -11,9 +15,11 @@ import java.util.Random;
 import java.util.UUID;
 
 @Service
-public class TokenServiceImpl implements TokenService {
+public class RedisServiceImpl implements RedisService {
     @Resource
     private RedisUtility redisUtility;
+    @Autowired
+    private JsonUtility jsonUtility;
 
     //生成token(格式为token:设备-加密的用户帐号-时间-六位随机数)
     public String generateToken(boolean userAgent, String userAccount) {
@@ -52,13 +58,20 @@ public class TokenServiceImpl implements TokenService {
     }
 
     @Override
-    public String getBodyByToken(String token) {
-        return (String) redisUtility.get(token);
+    public void storeBodyIndex(String userAccount, String bodyIndex, long seconds) throws Exception {
+        redisUtility.set(userAccount, bodyIndex, seconds);
     }
+
+    @Override
+    public String getBodyByKey(String key) {
+        return (String) redisUtility.get(key);
+    }
+
     @Override
     public boolean hasKey(String token) {
         return redisUtility.hasKey(token);
     }
+
     @Override
     public void deleteByKey(String key) {
         redisUtility.del(key);

@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/dthealth-dao/pom.xml" />
         <option value="$PROJECT_DIR$/dthealth-safe/pom.xml" />
         <option value="$PROJECT_DIR$/dthealth-simulation-web/pom.xml" />
+        <option value="$PROJECT_DIR$/dthealth-cache-web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

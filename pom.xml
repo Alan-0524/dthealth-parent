@@ -17,6 +17,7 @@
         <module>dthealth-manager-web</module>
         <module>dthealth-simulation-web</module>
         <module>dthealth-system-access-web</module>
+        <module>dthealth-cache-web</module>
         <module>dthealth-mq</module>
         <module>dthealth-utility</module>
         <module>dthealth-dao</module>

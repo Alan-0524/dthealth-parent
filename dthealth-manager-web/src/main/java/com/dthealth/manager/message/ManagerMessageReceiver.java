@@ -1,4 +1,4 @@
-package com.dthealth.access.message;
+package com.dthealth.manager.message;
 
 
 import com.dthealth.mq.MessageConsumer;
@@ -9,12 +9,12 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 @Component
-public class MessageReceiver extends MessageConsumer {
+public class ManagerMessageReceiver extends MessageConsumer {
 
     private static List<String> topics = new ArrayList<String>() {{
         add("DTS");
@@ -28,13 +28,23 @@ public class MessageReceiver extends MessageConsumer {
         props.setProperty("auto.commit.interval.ms", "1000");
         props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        super.receive(new KafkaConsumer<>(props), topics, new ConsumerOperationInterface() {
-            @Override
-            public void operate(ConsumerRecords<String, String> records) {
-                for (ConsumerRecord record : records) {
+        super.receive(new KafkaConsumer<>(props), topics, records -> {
+            for (ConsumerRecord record :records) {
 
-                }
             }
         });
+
     }
+//    @Autowired
+//    MessageConsumer<String> messageConsumer;
+//
+//    public void receive() {
+//        messageConsumer.receive("test-consumer-group", Arrays.asList("DTS"), new ConsumerOperationInterface() {
+//            @Override
+//            public void operate(ConsumerRecords records) {
+//
+//            }
+//        });
+//
+//    }
 }

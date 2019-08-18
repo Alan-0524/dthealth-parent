@@ -1,6 +1,6 @@
 package com.dthealth.access.config;
 
-import com.dthealth.dao.service.TokenService;
+import com.dthealth.dao.service.RedisService;
 import com.dthealth.safe.config.AuthenticationResultHandle;
 import com.dthealth.safe.config.UserInfoAuthentication;
 import com.dthealth.safe.config.UserRoleAuthentication;
@@ -31,7 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     @Qualifier("tokenServiceImpl")
-    private TokenService tokenService;
+    private RedisService redisService;
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -50,8 +50,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/resources/**", "/to-sign-in", "/do-sign-in", "/to-sign-up", "/do-sign-up","/clearCache").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .addFilter(new UserInfoAuthentication(authenticationManager(), tokenService))
-                .addFilter(new UserRoleAuthentication(authenticationManager(), tokenService))
+                .addFilter(new UserInfoAuthentication(authenticationManager(), redisService))
+                .addFilter(new UserRoleAuthentication(authenticationManager(), redisService))
                 // no need session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()

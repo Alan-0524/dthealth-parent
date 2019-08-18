@@ -10,8 +10,19 @@
             </AuthenticationSettings>
           </option>
           <option name="databaseVendor" value="DatabaseVendor{name='RedisDB'}" />
-          <option name="label" value="Redis" />
+          <option name="label" value="userInfo" />
           <option name="serverUrl" value="redis-19811.c51.ap-southeast-2-1.ec2.cloud.redislabs.com:19811" />
+          <option name="userDatabase" value="0" />
+        </ServerConfiguration>
+        <ServerConfiguration>
+          <option name="authenticationSettings">
+            <AuthenticationSettings>
+              <option name="password" value="Yw94vvCnjYDIMuf47IB7uV24tlXA21dB" />
+            </AuthenticationSettings>
+          </option>
+          <option name="databaseVendor" value="DatabaseVendor{name='RedisDB'}" />
+          <option name="label" value="data" />
+          <option name="serverUrl" value="redis-14516.c51.ap-southeast-2-1.ec2.cloud.redislabs.com:14516" />
           <option name="userDatabase" value="0" />
         </ServerConfiguration>
       </list>

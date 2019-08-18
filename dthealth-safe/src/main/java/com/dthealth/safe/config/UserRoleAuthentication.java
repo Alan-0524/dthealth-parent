@@ -1,6 +1,6 @@
 package com.dthealth.safe.config;
 
-import com.dthealth.dao.service.TokenService;
+import com.dthealth.dao.service.RedisService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,12 +21,12 @@ import java.util.Collections;
 
 public class UserRoleAuthentication extends BasicAuthenticationFilter {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
-    private TokenService tokenService;
+    private RedisService redisService;
     protected FilterChain chain;
 
-    public UserRoleAuthentication(AuthenticationManager authenticationManager, TokenService tokenService) {
+    public UserRoleAuthentication(AuthenticationManager authenticationManager, RedisService redisService) {
         super(authenticationManager);
-        this.tokenService = tokenService;
+        this.redisService = redisService;
     }
 
     public UserRoleAuthentication(AuthenticationManager authenticationManager, AuthenticationEntryPoint authenticationEntryPoint) {
@@ -48,7 +48,7 @@ public class UserRoleAuthentication extends BasicAuthenticationFilter {
         for (Cookie cookie : cookies) {
             if ("dthealth-token".equals(cookie.getName())) token = cookie.getValue();
         }
-        String value = tokenService.getBodyByToken(token);
+        String value = redisService.getBodyByKey(token);
         if (StringUtils.isEmpty(value)) {
             chain.doFilter(request, response);
             return;

@@ -1,4 +1,4 @@
-package com.dthealth.simulation;
+package com.dthealth.manager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,8 +9,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 @ComponentScan("com.dthealth")
 @EnableMongoRepositories("com.dthealth.dao.service")
-public class Application {
+public class ManagerWebApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ManagerWebApplication.class, args);
     }
 }
