@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 @Component
 public class RedisUtility {
-    @Resource
+
     private RedisTemplate<String, String> redisTemplate = new RedisTemplate<>();
 
     //=============================common============================
