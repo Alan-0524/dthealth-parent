@@ -2,16 +2,12 @@ package com.dthealth.access.service.impl;
 
 import com.dthealth.access.service.UserService;
 import com.dthealth.dao.entity.User;
-import com.dthealth.dao.service.RedisService;
 import com.dthealth.dao.service.UserRepositoryService;
 import com.dthealth.utility.controller.ResultResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
 
 @Service
 public class UserServiceImpl implements UserService {

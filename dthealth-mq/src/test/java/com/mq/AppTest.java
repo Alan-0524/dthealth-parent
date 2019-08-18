@@ -1,7 +1,6 @@
 package com.mq;
 
 import com.dthealth.dao.entity.BodyIndex;
-import com.dthealth.mq.MessageConsumer;
 import com.dthealth.mq.MessageProducer;
 import com.dthealth.mq.interfaces.ProducerResultInterface;
 import org.apache.kafka.clients.producer.RecordMetadata;
@@ -9,7 +8,6 @@ import org.junit.Test;
 
 import java.util.Properties;
 import java.util.Random;
-import java.util.UUID;
 
 public class AppTest extends MessageProducer {
 

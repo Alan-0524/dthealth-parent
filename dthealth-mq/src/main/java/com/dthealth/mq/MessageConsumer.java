@@ -4,12 +4,9 @@ package com.dthealth.mq;
 import com.dthealth.mq.interfaces.ConsumerOperationInterface;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.springframework.stereotype.Component;
 
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 abstract public class MessageConsumer{
 

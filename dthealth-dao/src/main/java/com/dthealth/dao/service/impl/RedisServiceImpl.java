@@ -1,17 +1,11 @@
 package com.dthealth.dao.service.impl;
 
-import com.dthealth.dao.entity.BodyIndex;
 import com.dthealth.dao.service.RedisService;
 import com.dthealth.dao.utility.RedisUtility;
 import com.dthealth.utility.json.JsonUtility;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Random;
 import java.util.UUID;
 
 @Service

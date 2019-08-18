@@ -1,9 +1,6 @@
 package com.dthealth.dao.service;
 
 
-import com.dthealth.dao.entity.BodyIndex;
-import com.fasterxml.jackson.core.JsonProcessingException;
-
 public interface RedisService {
 
     String storeToken(String userAccount, String role, long seconds) throws Exception;

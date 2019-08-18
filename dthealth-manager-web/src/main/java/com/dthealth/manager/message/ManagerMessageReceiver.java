@@ -2,15 +2,12 @@ package com.dthealth.manager.message;
 
 
 import com.dthealth.mq.MessageConsumer;
-import com.dthealth.mq.interfaces.ConsumerOperationInterface;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 @Component

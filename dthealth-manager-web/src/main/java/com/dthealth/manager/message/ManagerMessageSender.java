@@ -1,9 +1,6 @@
 package com.dthealth.manager.message;
 
 import com.dthealth.mq.MessageProducer;
-import com.dthealth.mq.interfaces.ProducerResultInterface;
-import org.apache.kafka.clients.producer.RecordMetadata;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Properties;

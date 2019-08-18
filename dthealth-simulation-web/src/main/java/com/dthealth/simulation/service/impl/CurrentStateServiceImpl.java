@@ -5,8 +5,6 @@ import com.dthealth.simulation.service.CurrentStateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.codec.ServerSentEvent;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-import reactor.core.publisher.Flux;
 
 @Service
 public class CurrentStateServiceImpl implements CurrentStateService {

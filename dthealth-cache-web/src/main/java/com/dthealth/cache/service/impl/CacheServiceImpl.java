@@ -1,20 +1,15 @@
 package com.dthealth.cache.service.impl;
 
 import com.dthealth.cache.service.CacheService;
-import com.dthealth.dao.entity.BodyIndex;
-
 import com.dthealth.dao.service.RedisService;
 import com.dthealth.mq.MessageConsumer;
-import com.dthealth.mq.interfaces.ConsumerOperationInterface;
 import com.dthealth.utility.logger.BaseLogger;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
