@@ -8,14 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/service/impl/CacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/service/impl/CacheServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/utility/RedisUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/utility/RedisUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/SimulationWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/SimulationWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/controller/SimulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/controller/SimulationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/CurrentStateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/CurrentStateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/impl/CurrentStateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/impl/CurrentStateServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +77,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4597701" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
