@@ -8,7 +8,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 import java.time.Duration;
 import java.util.List;
 
-abstract public class MessageConsumer{
+abstract public class MessageConsumer {
 
     public void receive(KafkaConsumer<String, String> consumer, List<String> topics, ConsumerOperationInterface consumerOperationInterface) {
         consumer.subscribe(topics);
@@ -24,9 +24,7 @@ abstract public class MessageConsumer{
         try {
             while (true) {
                 records = consumer.poll(Duration.ofMillis(100));
-                if (records != null) {
-                    consumerOperationInterface.operate(records);
-                }
+                consumerOperationInterface.operate(records);
             }
         } finally {
             // 网络连接和Socket也会随之关闭

@@ -33,9 +33,8 @@ public class CacheServiceImpl extends MessageConsumer implements CacheService {
         props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         super.receive(new KafkaConsumer<>(props), topics, records -> {
+            baseLogger.writeInfo("extractAndWrite","start extracting and writing...........");
             for (ConsumerRecord<String, String> record : records) {
-                System.out.println(record.key());
-                System.out.println(record.value());
                 try {
                     redisService.storeBodyIndex(record.key(), record.value(), 2L);
                 }catch (Exception e){
