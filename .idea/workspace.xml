@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-cache-web/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
