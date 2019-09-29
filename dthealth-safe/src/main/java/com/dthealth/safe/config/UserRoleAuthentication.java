@@ -46,7 +46,9 @@ public class UserRoleAuthentication extends BasicAuthenticationFilter {
         }
 
         for (Cookie cookie : cookies) {
-            if ("dthealth-token".equals(cookie.getName())) token = cookie.getValue();
+            if ("dthealth-token".equals(cookie.getName())) {
+                token = cookie.getValue();
+            }
         }
         String value = redisService.getBodyByKey(token);
         if (StringUtils.isEmpty(value)) {

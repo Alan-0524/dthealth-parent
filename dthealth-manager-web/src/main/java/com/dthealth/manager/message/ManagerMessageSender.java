@@ -10,7 +10,7 @@ public class ManagerMessageSender extends MessageProducer {
     private static Properties props = new Properties();
     private static String topic = "DTS";
 
-    public void send(String key,String value) {
+    public void send(String key,Object value) {
         props.put("bootstrap.servers", "139.180.163.0:9092");
         props.put("acks", "all");
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");

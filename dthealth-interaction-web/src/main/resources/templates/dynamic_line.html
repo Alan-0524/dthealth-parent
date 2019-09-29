@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+var id='[[${id}]]';
+var dataHeartbeat = [];
+var dataBloodPressure = [];
+var dataBloodFat = [];
+var dataBloodGlucose = [];
+var dataTemperature = [];
+var heartbeatChart = new CanvasJS.Chart("heartbeatContainer", {
+	zoomEnabled: true,
+	title: {
+		text: "Heartbeat"
+	},
+	axisX: {
+		title: "Sampling time"
+	},
+	axisY:{
+		prefix: "",
+		includeZero: false
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor:"pointer",
+		verticalAlign: "top",
+		fontSize: 22,
+		fontColor: "dimGrey",
+		itemclick : toggleHeartbeatDataSeries
+	},
+	data: [{
+		type: "line",
+		xValueType: "dateTime",
+		yValueFormatString: "####.00",
+		xValueFormatString: "hh:mm:ss",
+		showInLegend: true,
+		name: "Heartbeat",
+		dataPoints: dataHeartbeat
+		}]
+});
+
+var indexChart = new CanvasJS.Chart("indexContainer", {
+	zoomEnabled: true,
+	title: {
+		text: "Other health index"
+	},
+	axisX: {
+		title: "Sampling time"
+	},
+	axisY:{
+		prefix: "",
+		includeZero: false
+	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor:"pointer",
+		verticalAlign: "top",
+		fontSize: 22,
+		fontColor: "dimGrey",
+		itemclick : toggleIndexDataSeries
+	},
+	data: [{
+            type: "line",
+            xValueType: "dateTime",
+            yValueFormatString: "####.00",
+            showInLegend: true,
+            name: "Blood Pressure",
+            dataPoints: dataBloodPressure
+		},{
+			type: "line",
+			xValueType: "dateTime",
+			yValueFormatString: "####.00",
+			showInLegend: true,
+			name: "Blood Fat" ,
+			dataPoints: dataBloodFat
+	    },{
+			type: "line",
+			xValueType: "dateTime",
+			yValueFormatString: "####.00",
+			showInLegend: true,
+			name: "Blood Glucose" ,
+			dataPoints: dataBloodGlucose
+	    },{
+			type: "line",
+			xValueType: "dateTime",
+			yValueFormatString: "####.00",
+			showInLegend: true,
+			name: "Temperature" ,
+			dataPoints: dataTemperature
+	    }]
+});
+
+function toggleHeartbeatDataSeries(e) {
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else {
+		e.dataSeries.visible = true;
+	}
+	heartbeatChart.render();
+}
+
+function toggleIndexDataSeries(e) {
+	if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else {
+		e.dataSeries.visible = true;
+	}
+	indexChart.render();
+}
+
+
+function updateHeartbeatChartChart(data,time) {
+    data = $.parseJSON(data);
+	var heartbeat = Math.round(data.heartbeat);
+	dataHeartbeat.push({
+		x: time,
+		y: heartbeat
+	});
+	heartbeatChart.options.data[0].legendText = "Heartbeat"+heartbeat;
+	heartbeatChart.render();
+   }
+
+function updateIndexChartChart(data,time) {
+     data = $.parseJSON(data);
+     var bloodPressure = Math.round(data.bloodPressure);
+     var bloodFat = Math.round(data.bloodFat);
+     var bloodGlucose = Math.round(data.bloodGlucose);
+     var temperature = Math.round(data.temperature);
+
+     dataBloodPressure.push({
+		x: time,
+		y: bloodPressure
+	 });
+     dataBloodFat.push({
+		x: time,
+		y: bloodFat
+	 });
+     dataBloodGlucose.push({
+		x: time,
+		y: bloodGlucose
+	 });
+     dataTemperature.push({
+		x: time,
+		y: temperature
+	 });
+
+	indexChart.options.data[0].legendText = "Blood Pressure"+bloodPressure;
+	indexChart.options.data[1].legendText = "Blood Fat"+bloodFat;
+	indexChart.options.data[2].legendText = "Blood Glucose"+bloodGlucose;
+	indexChart.options.data[3].legendText = "Temperature"+temperature;
+	indexChart.render();
+   }
+
+    var sourceHeartbeat=new EventSource("/currentState/loadingCurrentHeartbeat/"+id);
+    sourceHeartbeat.onmessage=function(event){
+        updateHeartbeatChartChart(event.data, new Date().getTime())
+    };
+
+    var sourceIndex = new EventSource("/currentState/loadingCurrentIndex/"+id);
+    sourceIndex.onmessage=function(event){
+        updateIndexChartChart(event.data, new Date().getTime())
+    };
+}
+
+</script>
+</head>
+<body>
+<div id="heartbeatContainer" style="height: 370px; width: 100%;"></div>
+<div id="indexContainer" style="height: 370px; width: 100%;"></div>
+
+<script src="/js/canvasjs.min.js"></script>
+<br/>
+</body>
+</html>

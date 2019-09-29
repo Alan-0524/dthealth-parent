@@ -10,9 +10,9 @@
         <module name="dthealth-utility" />
         <module name="dthealth-cache-web" />
         <module name="dthealth-system-access-web" />
+        <module name="dthealth-interaction-web" />
         <module name="dthealth-mq" />
         <module name="dthealth-safe" />
-        <module name="dthealth-simulation-web" />
         <module name="dthealth-manager-web" />
       </profile>
     </annotationProcessing>
@@ -21,10 +21,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="dthealth-cache-web" options="-parameters" />
       <module name="dthealth-dao" options="-parameters" />
+      <module name="dthealth-interaction-web" options="-parameters" />
       <module name="dthealth-manager-web" options="-parameters" />
       <module name="dthealth-mq" options="-parameters" />
       <module name="dthealth-safe" options="-parameters" />
-      <module name="dthealth-simulation-web" options="-parameters" />
       <module name="dthealth-system-access-web" options="-parameters" />
       <module name="dthealth-utility" options="-parameters" />
     </option>

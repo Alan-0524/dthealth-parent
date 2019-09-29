@@ -30,7 +30,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private UserDetailsService userDetailsService;
 
     @Autowired
-    @Qualifier("tokenServiceImpl")
     private RedisService redisService;
 
     @Bean

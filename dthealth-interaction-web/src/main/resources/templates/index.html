@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <meta charset="UTF-8">
+    <title>Nested Layout - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="/css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/css/icon.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+<script type="text/javascript" th:inline="none">
+var loadDataGrid = function(){
+$('#dg').datagrid({
+    url:'user/findAllByPage',
+    method:'get',
+    singleSelect:true,
+    pagination:true,
+    pagePosition:'bottom',
+    idField: 'id',
+    rownumbers:true,
+    toolbar:[{
+                iconCls: 'icon-add',
+                text: 'add',
+                handler: function () {
+                    alert("add");
+                }
+            },'-',{
+                iconCls: 'icon-edit',
+                text: 'edit',
+                handler: function () {
+                      editUser();
+                    }
+            },'-',{
+                iconCls: 'icon-remove',
+                text: 'delete',
+                handler: function () {
+                      alert("delete");
+                }
+            },'-',{
+                iconCls: 'icon-reload',
+                text: 'refresh',
+                handler: function () {
+                     refresh();
+                }
+            },'-',{
+                iconCls: 'icon-large-chart',
+                text: 'monitor',
+                handler: function () {
+                         loadCurrentHeartbeat();
+<!--                    var id = $('#dg').datagrid('getSelected').id;-->
+<!--                    if(id == null || id.length == 0){-->
+<!--                        $.messager.confirm('Confirm','Please select a user',function(r){-->
+<!--                                if (r){-->
+<!--                                    alert('ok');-->
+<!--                                    return;-->
+<!--                                }-->
+<!--                            });-->
+<!--                        }-->
+<!--                        $("#chartDiv").load('/loadCurrentState/'+id,-->
+<!--                            function (responseText, textStatus, XMLHttpRequest){-->
+<!--                                alert(responseText);-->
+<!--                                alert(textStatus);-->
+<!--                                alert(XMLHttpRequest);-->
+<!--                                $('#chartDiv').html(responseText);-->
+<!--                            });-->
+<!--                    $('#chartDiv').dialog('refresh', '/loadCurrentState/'+id);-->
+<!--                    $('#chartDiv').dialog('open').dialog('center').dialog('setTitle','Monitoring');-->
+                }
+            }],
+    frozenColumns:[[
+                {field:'checkbox',checkbox:true},
+                {field:'fullName',title:'Full name',width:200}
+            ]],
+<!--    queryParams:{-->
+<!--		'pageNo' : function(){-->
+<!--			return $('#dg').datagrid("getPager").pagination("options").pageNumber;-->
+<!--		},-->
+<!--		'pageSize' : 20-->
+<!--    },-->
+    columns:[[
+        {field:'shownGender',title:'Gender',width:100},
+        {field:'dateOfBirth',title:'Date of Birth',width:130},
+        {field:'telephone',title:'Telephone',width:120},
+        {field:'createTime',title:'Registration time',width:130},
+        {field:'address',title:'Address',width:120},
+        {field:'surgeryTime',title:'Surgery time',width:130},
+        {field:'reexamination',title:'Reexamination time',width:130},
+        {field:'symptom',title:'Cardinal symptom',width:120}
+    ]]
+    });
+}
+
+var data = [{
+	        text: 'Item1',
+	        iconCls: 'icon-sum',
+	        state: 'open',
+	        children: [{
+	            text: 'Option1'
+	        },{
+	            text: 'Option2'
+	        },{
+	            text: 'Option3',
+	            children: [{
+	                text: 'Option31'
+	            },{
+	                text: 'Option32'
+	            }]
+	        }]
+	    },{
+	        text: 'Item2',
+	        iconCls: 'icon-more',
+	        children: [{
+	            text: 'Option4'
+	        },{
+	            text: 'Option5'
+	        },{
+	            text: 'Option6'
+	        }]
+	    }];
+
+var loadCurrentHeartbeat = function(){
+    var id = $('#dg').datagrid('getSelected').id;
+    if(id == null || id.length == 0){
+        $.messager.confirm('Confirm','Please select a user',function(r){
+                if (r){
+                    alert('ok');
+                    return;
+                }
+            });
+        }
+    window.open("/loadCurrentState/"+id);
+}
+
+function editUser(){
+            var row = $('#dg').datagrid('getSelected');
+            if (row){
+                $('#dlg').dialog('open').dialog('center').dialog('setTitle','Edit User');
+                $('#fm').form('load',row);
+                url = 'user/findUserById?id='+row.id;
+            }
+        }
+
+var submitForm = function(){
+            $('#fm').form('submit');
+            $('#dlg').dialog('close');
+            $('#dg').datagrid('reload');
+        }
+
+var refresh = function(){
+    $('#dg').datagrid('reload');
+}
+
+$(function(){
+    loadDataGrid();
+})
+
+
+</script>
+<div data-options="region:'north'" style="height:65px;background:#eee;">
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp; DT health monitoring platform</h2>
+</div>
+<div data-options="region:'south',split:true" style="height:50px;"></div>
+<div data-options="region:'east'" title="Details" style="width:180px;"></div>
+
+<div id="sm" class="easyui-sidemenu" data-options="region:'west',data:data" title="Navigation"></div>
+<div data-options="region:'center'" title="Patients list" style="padding:5px">
+    <div class="easyui-layout" data-options="fit:true">
+        <!--        <div data-options="region:'north',split:true" style="height:50px"></div>-->
+        <div data-options="region:'west',split:true">
+            <table id="dg" class="easyui-datagrid" style="height:100%"></table>
+        </div>
+        <!--        <div data-options="region:'center'">-->
+        <!--&lt;!&ndash;            <div class="easyui-layout" data-options="fit:true">&ndash;&gt;-->
+        <!--&lt;!&ndash;                <div data-options="region:'north'" style="height:150px"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;                <div id="heartbeat" data-options="region:'center'"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;            </div>&ndash;&gt;-->
+        <!--        </div>-->
+    </div>
+</div>
+<div id="dlg" class="easyui-dialog" style="width:400px;height:500px"
+     data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
+    <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px" action="user/saveUser">
+        <h3>User Information</h3>
+        <div style="margin-bottom:10px">
+            <input name="id" hidden>
+            <input name="roleCode" hidden>
+            <input name="status" hidden>
+            <input name="firstName" class="easyui-textbox" required="true" label="First Name:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="middleName" class="easyui-textbox" label="Middle Name:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="lastName" class="easyui-textbox" label="LastName:" style="width:100%">
+        </div>
+        <div style="margin-bottom:20px">
+            <input class="easyui-radiobutton" name="gender" value="0" label="Female:">
+        </div>
+        <div style="margin-bottom:20px">
+            <input class="easyui-radiobutton" name="gender" value="1" label="Male:">
+        </div>
+        <div style="margin-bottom:10px">
+            <input class="easyui-datetimebox" name="dateOfBirth" label="Date of Birth:" labelPosition="top"
+                   style="width:100%;">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="address" class="easyui-textbox" required="true" label="Address:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="telephone" class="easyui-textbox" required="true" label="Telephone:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="createTime" class="easyui-textbox" readonly label="Registration time:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input name="symptom" class="easyui-textbox" required="true" label="Symptom:" style="width:100%">
+        </div>
+        <div style="margin-bottom:10px">
+            <input class="easyui-datetimebox" name="surgeryTime" label="Surgery DateTime:" labelPosition="top"
+                   style="width:100%;">
+        </div>
+        <div style="margin-bottom:10px">
+            <input class="easyui-datetimebox" name="reexamination" label="Reexamination DateTime:" labelPosition="top"
+                   style="width:100%;">
+        </div>
+    </form>
+    <div style="text-align:center;padding:5px 0">
+        <div id="dlg-buttons">
+            <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="submitForm()" style="width:90px">Save</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+        </div>
+    </div>
+    <div class="easyui-dialog" id="chartDiv" title="Fluid Dialog" style="width:100%;height:500px;max-width:1200px;padding:10px" data-options="
+            onResize:function(){
+                $(this).dialog('center');
+                $(this).dialog('close');
+            }">
+
+    </div>
+</div>
+</body>
+</html>

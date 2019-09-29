@@ -14,8 +14,6 @@
     <artifactId>dthealth-manager-web</artifactId>
 
     <name>dthealth-manager-web</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
     <properties>
         <java.version>1.8</java.version>
     </properties>

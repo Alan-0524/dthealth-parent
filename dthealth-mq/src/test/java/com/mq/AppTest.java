@@ -1,17 +1,20 @@
 package com.mq;
 
-import com.dthealth.dao.entity.BodyIndex;
 import com.dthealth.mq.MessageProducer;
+import com.dthealth.mq.entities.BodyIndex;
 import com.dthealth.mq.interfaces.ProducerResultInterface;
+import com.dthealth.utility.json.JsonUtility;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.junit.Test;
 
 import java.util.Properties;
 import java.util.Random;
 
+import static java.lang.Thread.sleep;
 
 public class AppTest extends MessageProducer {
-
+    JsonUtility jsonUtility = new JsonUtility();
     //    MessageConsumer messageConsumer = new MessageConsumer();
 //
 //
@@ -36,7 +39,7 @@ public class AppTest extends MessageProducer {
 //        System.out.println(System.currentTimeMillis()-startTime);
 //        map.clear();
 //    }
-//
+
 //    @Test
 //    public void testProducer() throws InterruptedException {
 //        Properties props = new Properties();
@@ -45,21 +48,28 @@ public class AppTest extends MessageProducer {
 //        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 //        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 //        BodyIndex bodyIndex;
-//        while (true) {
-//            //    private String bloodPressure;
-////    private String heartbeat;
-////    private String bloodFat;
-////    private String glucose;
-////    private String temperature;
-//            super.send("DTS", props, "long.an.0524@gmail.com-heartbeat", String.valueOf(new Random().nextInt(5)+60), new ProducerResultInterface() {
-//                @Override
-//                public void onCompletion(RecordMetadata metadata, Exception e) {
-//                    System.out.println(metadata.offset());
-//                }
-//            });
-//            Thread.sleep(new Random().nextInt(20)+850);
+//        try {
+//            while (true) {
+//                bodyIndex = new BodyIndex();
+//                bodyIndex.setHeartbeatStrength((float) (new Random().nextInt(20) + 130 + (new Random().nextInt(2) + (-1)) * 0.3));
+//                bodyIndex.setBloodFat((float) (new Random().nextInt(20) + 100 + (new Random().nextInt(2) + (-1)) * 0.3));
+//                bodyIndex.setBloodGlucose((float) (new Random().nextInt(5) + 7 + (new Random().nextInt(2) + (-1)) * 0.3));
+//                bodyIndex.setBloodPressure((float) (new Random().nextInt(40) + 60 + (new Random().nextInt(2) + (-1)) * 0.3));
+//                bodyIndex.setTemperature((float) (37 + (new Random().nextInt(2) + (-1)) * 0.3));
+//                send("DTS", props, "5d53b73492f6e331bc118715", jsonUtility.objectToJson(bodyIndex), new ProducerResultInterface() {
+//                    @Override
+//                    public void onCompletion(RecordMetadata metadata, Exception e) {
+//                        System.out.println(metadata.offset());
+//                    }
+//                });
+//                sleep(700);
+//            }
+//        } catch (InterruptedException | JsonProcessingException e) {
+//            e.printStackTrace();
 //        }
 //    }
+
+
 //
 //    @Test
 //    public void testConsumer(){
@@ -71,4 +81,5 @@ public class AppTest extends MessageProducer {
 //            }
 //        });
 //    }
+
 }

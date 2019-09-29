@@ -1,0 +1,49 @@
+package com.dthealth.mq.entities;
+
+import com.dthealth.mq.MessageProducer;
+import com.dthealth.mq.interfaces.ProducerResultInterface;
+import com.dthealth.utility.json.JsonUtility;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import net.sf.json.JSONArray;
+import org.apache.kafka.clients.producer.RecordMetadata;
+
+
+import java.util.Properties;
+import java.util.Random;
+
+import static java.lang.Thread.sleep;
+
+public class Thread_heartbeat extends MessageProducer implements Runnable {
+    private Thread t;
+    JsonUtility jsonUtility = new JsonUtility();
+    private String id;
+
+    public Thread_heartbeat(String id) {
+        this.id = id;
+    }
+    BodyIndex bodyIndex;
+
+    @Override
+    public void run() {
+        Properties props = new Properties();
+        props.put("bootstrap.servers", "139.180.163.0:9092");
+        props.put("acks", "all");
+        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+        try {
+            while (true) {
+                bodyIndex = new BodyIndex();
+                bodyIndex.setHeartbeatStrength((float) (new Random().nextInt(20) + 130 + (new Random().nextInt(2) + (-1)) * 0.3));
+                send("DTS", props, id + "-heartbeat", JSONArray.fromObject(bodyIndex).toString(), new ProducerResultInterface() {
+                    @Override
+                    public void onCompletion(RecordMetadata metadata, Exception e) {
+                        System.out.println(metadata.offset());
+                    }
+                });
+                sleep(new Random().nextInt(20) + 850);
+            }
+        } catch (InterruptedException  e) {
+            e.printStackTrace();
+        }
+    }
+}

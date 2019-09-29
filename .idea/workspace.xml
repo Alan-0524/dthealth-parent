@@ -7,8 +7,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="199f36bb-8d06-4d00-83c7-60d759a11585" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/java/com/dthealth/interaction/service/CurrentStateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/java/com/dthealth/interaction/service/impl/CurrentStateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/test/java/com/dthealth/interaction/SimulationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/noSqlSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/noSqlSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-cache-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/CacheWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/CacheWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/service/impl/CacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-cache-web/src/main/java/com/dthealth/cache/service/impl/CacheServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-cache-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-cache-web/src/test/java/com/dthealth/cache/test/DaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/entity/BodyIndex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/entity/SimpleMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/entity/SimpleMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/UserRepositoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/UserRepositoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/impl/RedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/service/impl/RedisServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/utility/RedisUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-dao/src/main/java/com/dthealth/dao/utility/RedisUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/message/ManagerMessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-manager-web/src/main/java/com/dthealth/manager/message/ManagerMessageSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-mq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/MessageProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/interfaces/ConsumerOperationInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/interfaces/ConsumerOperationInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-mq/src/test/java/com/mq/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/CustomUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/SecureUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/SecureUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserInfoAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserInfoAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserRoleAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-safe/src/main/java/com/dthealth/safe/config/UserRoleAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-interaction-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/SimulationWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/java/com/dthealth/interaction/InteractionWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/controller/SimulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/java/com/dthealth/interaction/controller/SimulationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/message/MessageReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/message/MessageSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/CurrentStateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/HomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/java/com/dthealth/interaction/service/HomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/impl/CurrentStateServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/java/com/dthealth/simulation/service/impl/HomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-interaction-web/src/main/java/com/dthealth/interaction/service/impl/HomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/static/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/templates/failure.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/templates/sign-in.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/main/resources/templates/sign-up.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-simulation-web/src/test/java/com/dthealth/simulation/SimulationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/message/MessageReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/java/com/dthealth/access/message/MessageReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-system-access-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-system-access-web/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-utility/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-utility/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-utility/src/main/java/com/dthealth/utility/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-utility/src/main/java/com/dthealth/utility/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dthealth-utility/src/main/java/com/dthealth/utility/json/JsonUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/dthealth-utility/src/main/java/com/dthealth/utility/json/JsonUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,39 +142,42 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dthealth-dao/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dthealth-mq/src/main/java/com/dthealth/mq/entities" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4597701" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.redisPlugin" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.dthealth.interaction.service" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-dao\src\main\resources" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-mq\src\main\java\com\dthealth\mq" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-cache-web\src\main\java\com\dthealth\cache\service\impl" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-cache-web\src\main\resources" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-simulation-web\src\main\java\com\dthealth\simulation" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-mq\src\main\java\com\dthealth\mq\entities" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-interaction-web\src\main\resources\static\js" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-interaction-web\src\main\resources\templates" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-interaction-web\src\main\resources\static\css" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-interaction-web\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="com.dthealth.mq.interfaces" />
-      <recent name="com.dthealth.simulation.config" />
+      <recent name="com.dthealth.access.config" />
+      <recent name="com.dthealth.mq.entities" />
+      <recent name="com.dthealth.simulation.entity" />
+      <recent name="com.dthealth.cache.service.impl" />
       <recent name="com.dthealth.cache.service" />
-      <recent name="com.dthealth.safe.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-interaction-web\src\main\resources\static\css" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-interaction-web\src\main\resources\static" />
+      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-cache-web\src\test\java\com\dthealth" />
       <recent name="D:\IdeaProjects\dthealth-parent\dthealth-cache-web\src\main\java\com\dthealth\cache" />
       <recent name="D:\IdeaProjects\dthealth-parent\dthealth-mq\src\main\java\com\dthealth" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-utility\src\main\java\com\dthealth" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-manager-web\src\main\java\com\dthealth" />
-      <recent name="D:\IdeaProjects\dthealth-parent\dthealth-dao\src\main\java\com\dthealth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -118,13 +193,13 @@
     </option>
     <option name="contentProportion" value="0.14705883" />
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.testProducer">
-    <configuration name="SimulationWebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.dthealth.simulation.SimulationWebApplication" />
-      <module name="dthealth-simulation-web" />
+  <component name="RunManager" selected="JUnit.AppTest">
+    <configuration name="InteractionWebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dthealth.interaction.InteractionWebApplication" />
+      <module name="dthealth-interaction-web" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.dthealth.simulation.*" />
+          <option name="PATTERN" value="com.dthealth.interaction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,7 +207,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testProducer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SystemAccessWebApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dthealth.access.SystemAccessWebApplication" />
+      <module name="dthealth-system-access-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dthealth.access.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dthealth-mq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mq" />
+      <option name="MAIN_CLASS_NAME" value="com.mq.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testProducer (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dthealth-mq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mq" />
+      <option name="MAIN_CLASS_NAME" value="com.mq.AppTest" />
+      <option name="METHOD_NAME" value="testProducer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testProducer (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dthealth-mq" />
       <extension name="coverage">
         <pattern>
@@ -161,16 +280,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AppTest.testProducer" />
+      <item itemvalue="Application.InteractionWebApplication" />
+      <item itemvalue="Application.SystemAccessWebApplication" />
+      <item itemvalue="JUnit.AppTest.testProducer (2)" />
+      <item itemvalue="JUnit.AppTest.testProducer (1)" />
+      <item itemvalue="JUnit.AppTest" />
       <item itemvalue="Smart Tomcat.Tomcat" />
-      <item itemvalue="Application.SimulationWebApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest.testProducer" />
-        <item itemvalue="Application.SimulationWebApplication" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.testProducer (2)" />
+        <item itemvalue="Application.SystemAccessWebApplication" />
+        <item itemvalue="Application.InteractionWebApplication" />
+        <item itemvalue="JUnit.AppTest.testProducer (1)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS" />
   </component>
   <component name="SvnConfiguration">
     <configuration />

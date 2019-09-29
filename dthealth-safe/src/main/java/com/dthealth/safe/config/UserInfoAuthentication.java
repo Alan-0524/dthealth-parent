@@ -1,6 +1,7 @@
 package com.dthealth.safe.config;
 
 import com.dthealth.dao.service.RedisService;
+import com.dthealth.utility.json.JsonUtility;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,11 +19,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class UserInfoAuthentication extends UsernamePasswordAuthenticationFilter {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private RedisService redisService;
     private AuthenticationManager authenticationManager;
+    private JsonUtility jsonUtility = new JsonUtility();
 
     public UserInfoAuthentication(AuthenticationManager authenticationManager, RedisService redisService) {
         this.authenticationManager = authenticationManager;
@@ -65,23 +68,29 @@ public class UserInfoAuthentication extends UsernamePasswordAuthenticationFilter
                                             HttpServletResponse response, FilterChain chain, Authentication authResult)
             throws IOException, ServletException {
         SecureUser secureUser = (SecureUser) authResult.getPrincipal();
-        String userAccount = secureUser.getUsername();
+        String id = secureUser.getId();
         GrantedAuthority role = (GrantedAuthority) secureUser.getAuthorities().toArray()[0];
         String roleCode = role.getAuthority();
         String token = "";
         try {
-            token = redisService.storeToken(userAccount, roleCode, 3600L);
+            token = redisService.storeToken(id, roleCode, 2 * 3600L);
         } catch (JsonProcessingException je) {
             logger.error("JsonProcessingException: {}", je.getMessage());
         } catch (Exception e) {
             logger.error("Exception: {}", e.getMessage());
         }
         Cookie cookie = new Cookie("dthealth-token", token);
-        cookie.setMaxAge(60 * 60);
+        cookie.setMaxAge(2 * 60 * 60);
+        PrintWriter out = response.getWriter();
         response.addCookie(cookie);
         response.setStatus(HttpServletResponse.SC_OK);
-        response.setContentType("text/html;charset=UTF-8");
-        response.sendRedirect("http://localhost:8080/home");
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        out.print(jsonUtility.objectToJson(secureUser));
+        out.flush();
+
+//        response.setContentType("text/html;charset=UTF-8");
+//        response.sendRedirect("http://localhost:8080/home");
     }
 
     @Override

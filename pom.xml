@@ -15,7 +15,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>dthealth-manager-web</module>
-        <module>dthealth-simulation-web</module>
+        <module>dthealth-interaction-web</module>
         <module>dthealth-system-access-web</module>
         <module>dthealth-cache-web</module>
         <module>dthealth-mq</module>

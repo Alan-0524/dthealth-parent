@@ -2,15 +2,19 @@ package com.dthealth.mq;
 
 
 import com.dthealth.mq.interfaces.ConsumerOperationInterface;
+import com.dthealth.utility.logger.BaseLogger;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.Duration;
 import java.util.List;
 
 abstract public class MessageConsumer {
+    @Autowired
+    private BaseLogger baseLogger;
 
-    public void receive(KafkaConsumer<String, String> consumer, List<String> topics, ConsumerOperationInterface consumerOperationInterface) {
+    public void receive(KafkaConsumer<String, Object> consumer, List<String> topics, ConsumerOperationInterface consumerOperationInterface) {
         consumer.subscribe(topics);
         // 消费者必须持续对Kafka进行轮询，否则会被认为已经死亡，它的分区就会被移交给群组里的其它消费者
         // 在消费者的缓冲区里没有可用数据时会发生阻塞
@@ -20,12 +24,14 @@ abstract public class MessageConsumer {
         //  3. 记录在分区里的偏移量
         //  4. 记录的键值对
         // timeout参数指定多久之后可以返回，不管有没有可用的数据，0会立即返回
-        ConsumerRecords<String, String> records;
+        ConsumerRecords<String, Object> records;
         try {
             while (true) {
                 records = consumer.poll(Duration.ofMillis(100));
                 consumerOperationInterface.operate(records);
             }
+        } catch (Exception e) {
+            baseLogger.writeError("receive in MessageConsumer", e.getMessage());
         } finally {
             // 网络连接和Socket也会随之关闭
             // 并且立即触发一次再均衡，而不是等待群组协调器发现它不再发送心跳并认定它已死亡
