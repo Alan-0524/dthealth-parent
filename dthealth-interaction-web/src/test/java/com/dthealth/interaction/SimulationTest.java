@@ -17,15 +17,15 @@ public class SimulationTest {
     @Autowired
     UserRepository userRepository;
 
-//    @Test
-//    public void contextLoads() {
-//        User user = new User();
-//        user.setUserAccount("ddddd@gmail.com");
-//        user.setFirstName("Stephen");
-//        user.setMiddleName("");
-//        user.setLastName("Curry");
-//        user.setStatus("0");
-//        user.setRoleCode("ROLE_USER");
+    @Test
+    public void contextLoads() {
+        User user = new User();
+        user.setUserAccount("ddddd@gmail.com");
+        user.setFirstName("Stephen");
+        user.setMiddleName("");
+        user.setLastName("Curry");
+        user.setStatus("0");
+        user.setRoleCode("ROLE_USER");
 //        userRepository.save(user);
-//    }
+    }
 }
