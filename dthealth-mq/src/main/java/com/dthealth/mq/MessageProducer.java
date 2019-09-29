@@ -2,7 +2,6 @@ package com.dthealth.mq;
 
 
 import com.dthealth.mq.interfaces.ProducerResultInterface;
-import net.sf.json.JSONArray;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;

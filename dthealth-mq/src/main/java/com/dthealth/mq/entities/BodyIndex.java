@@ -1,7 +1,5 @@
 package com.dthealth.mq.entities;
 
-import org.springframework.data.annotation.Id;
-
 public class BodyIndex {
 
     private float bloodPressure; //60-100

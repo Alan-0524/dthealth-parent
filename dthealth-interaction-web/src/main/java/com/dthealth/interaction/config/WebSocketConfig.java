@@ -17,8 +17,6 @@ import org.springframework.web.socket.server.HandshakeInterceptor;
 import org.springframework.web.socket.server.support.DefaultHandshakeHandler;
 
 import java.security.Principal;
-import java.util.Enumeration;
-import java.util.List;
 import java.util.Map;
 
 @Configuration

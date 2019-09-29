@@ -5,8 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.io.IOException;
-
 @Component
 public class JsonUtility {
 

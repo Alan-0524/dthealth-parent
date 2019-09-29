@@ -1,17 +1,7 @@
 package com.mq;
 
 import com.dthealth.mq.MessageProducer;
-import com.dthealth.mq.entities.BodyIndex;
-import com.dthealth.mq.interfaces.ProducerResultInterface;
 import com.dthealth.utility.json.JsonUtility;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import org.apache.kafka.clients.producer.RecordMetadata;
-import org.junit.Test;
-
-import java.util.Properties;
-import java.util.Random;
-
-import static java.lang.Thread.sleep;
 
 public class AppTest extends MessageProducer {
     JsonUtility jsonUtility = new JsonUtility();

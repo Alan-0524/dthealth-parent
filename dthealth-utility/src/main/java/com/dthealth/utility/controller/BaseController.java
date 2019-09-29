@@ -2,8 +2,6 @@ package com.dthealth.utility.controller;
 
 import com.dthealth.utility.json.JsonUtility;
 import com.dthealth.utility.logger.BaseLogger;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import net.sf.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

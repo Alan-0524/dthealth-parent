@@ -2,10 +2,6 @@ package com.dthealth.access.message;
 
 
 import com.dthealth.mq.MessageConsumer;
-import com.dthealth.mq.interfaces.ConsumerOperationInterface;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
