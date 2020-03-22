@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>Title</title>
 </head>
 <body>
-<span th:text="${result}"></span>
-<!--<form th:action="@{/do-sign-in}" th:object="${user}" method="post">-->
-<!--    <input th:field="*{userAccount}"/><br>-->
-<!--    <input th:field="*{password}" type="password"/><br>-->
-<!--    <button type="submit">submit</button><br>-->
-<!--</form>-->
-<form th:action="@{/do-sign-in}" method="post">
-    <input name="userAccount"/><br>
-    <input name="password" type="password"/><br>
-    <button type="submit">submit</button>
-    <br>
-</form>
+	<span th:text="${result}"></span>
+	<!--<form th:action="@{/do-sign-in}" th:object="${user}" method="post">-->
+	<!--    <input th:field="*{userAccount}"/><br>-->
+	<!--    <input th:field="*{password}" type="password"/><br>-->
+	<!--    <button type="submit">submit</button><br>-->
+	<!--</form>-->
+	<form th:action="@{/do-sign-in}" method="post">
+		<input name="userAccount" /><br> <input name="password"
+			type="password" /><br>
+		<button type="submit">submit</button>
+		<br>
+	</form>
 </body>
 </html>

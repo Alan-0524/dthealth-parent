@@ -11,7 +11,11 @@ import java.util.Collections;
 
 public class SecureUser implements UserDetails {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
     private String id;
     private String userAccount;
     private String username;
