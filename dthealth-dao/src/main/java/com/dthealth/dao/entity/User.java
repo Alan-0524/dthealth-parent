@@ -27,7 +27,6 @@ public class User implements Serializable {
     private String reexamination;
     //0 normal,1 disable
     private String status;
-    
     /**
      * for format
      */
