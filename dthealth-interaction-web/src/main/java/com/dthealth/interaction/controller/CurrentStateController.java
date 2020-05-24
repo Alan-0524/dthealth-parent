@@ -11,6 +11,7 @@ public class CurrentStateController {
     @RequestMapping("/loadCurrentState/{id}")
     public String loadCurrentState(@PathVariable String id, Model model) {
         model.addAttribute("id",id);
+        //test
         return "dynamic_line";
     }
 }
