@@ -24,6 +24,7 @@ public class InteractionWebApplication implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println("feature-master");
+        System.out.println("feature-master-02");
         messageExtractionScheduler.runTasks();
     }
 }
