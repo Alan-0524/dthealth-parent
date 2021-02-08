@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="UTF-8">
+<title>Title</title>
 </head>
 <body>
-<form th:action="@{/do-sign-up}" method="post">
-    <input name="userAccount"/>userAccount<br>
-    <input name="password" type="password"/>password<br>
-    <input name="firstName" />firstName<br>
-    <input name="middleName" />middleName<br>
-    <input name="lastName" />lastName<br>
-    <input name="roleCode" value="ROLE_USER"/>lastName<br>
-    <input name="address" />address<br>
-    <input name="telephone" />telephone<br>
-    <button type="submit">submit</button><br>
-</form>
+	<form th:action="@{/do-sign-up}" method="post">
+		<input name="userAccount" />userAccount<br> <input
+			name="password" type="password" />password<br> <input
+			name="firstName" />firstName<br> <input name="middleName" />middleName<br>
+		<input name="lastName" />lastName<br> <input name="roleCode"
+			value="ROLE_USER" />lastName<br> <input name="address" />address<br>
+		<input name="telephone" />telephone<br>
+		<button type="submit">submit</button>
+		<br>
+	</form>
 </body>
 </html>
